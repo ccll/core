@@ -1,4 +1,4 @@
-"""Config flow for Switch integration."""
+"""Config flow for Switch as X integration."""
 from __future__ import annotations
 
 from typing import Any
@@ -12,7 +12,7 @@ from homeassistant.helpers import (
     selector,
 )
 
-from .const import DOMAIN
+from . import DOMAIN
 
 STEPS = {
     "init": vol.Schema(
@@ -28,7 +28,7 @@ STEPS = {
 class SwitchLightConfigFlowHandler(
     helper_config_entry_flow.HelperConfigFlowHandler, domain=DOMAIN
 ):
-    """Handle a config or options flow for Switch Light."""
+    """Handle a config flow for Switch as X."""
 
     steps = STEPS
 
